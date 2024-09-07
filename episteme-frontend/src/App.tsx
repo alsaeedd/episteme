@@ -5,6 +5,7 @@ import {NewNote} from "./NewNote.tsx";
 import {useLocalStorage} from "./useLocalStorage.tsx";
 import {useMemo} from "react";
 import {v4 as uuidV4} from "uuid";
+import {NoteList} from "./NoteList.tsx";
 
 export type RawNote = {
     id: string
@@ -57,13 +58,13 @@ function App() {
         <Routes>
           <Route path="/" element={
               <div>
-                  <h1>Episteme</h1>
+                  <NoteList  availableTags={tags} notes={notesWithTags}/>
               </div>
           }/>
           <Route path="/new" element={
               <NewNote onSubmit={onCreateNote} onAddTag={addTag} availableTags={tags}/>
           }/>
-          <Route path="/:id">
+          <Route path="/:id" element={<NoteLayout notes={notesWithTags}/>}>
             <Route index element={
               <div>
                 <h1>Show</h1>
