@@ -1,10 +1,15 @@
 import {useNote} from "./NoteLayout.tsx";
 import {Badge, Button, Col, Row, Stack} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-export function Note() {
+type NoteProps = {
+    onDelete: (id:string ) => void
+}
+
+export function Note({onDelete}: NoteProps) {
     const note = useNote();
+    const navigate = useNavigate();
 
     return(
         <div>
@@ -21,7 +26,7 @@ export function Note() {
                 </Col>
                 <Col xs={"auto"}>
                     <Stack gap={2} direction={"horizontal"}>
-                        <Button variant={"outline-danger"}>Delete</Button>
+                        <Button onClick={() => {onDelete(note.id); navigate("/")}} variant={"outline-danger"}>Delete</Button>
                         <Link to={"/"}>
                             <Button variant={"outline-secondary"}>Back</Button>
                         </Link>
