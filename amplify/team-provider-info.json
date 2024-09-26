@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-episteme-dev-7c1ef-authRole",
+      "UnauthRoleArn": "arn:aws:iam::533266970081:role/amplify-episteme-dev-7c1ef-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::533266970081:role/amplify-episteme-dev-7c1ef-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-episteme-dev-7c1ef-deployment",
+      "UnauthRoleName": "amplify-episteme-dev-7c1ef-unauthRole",
+      "StackName": "amplify-episteme-dev-7c1ef",
+      "StackId": "arn:aws:cloudformation:us-east-1:533266970081:stack/amplify-episteme-dev-7c1ef/32017380-7bf3-11ef-820c-0affd0b947ef",
+      "AmplifyAppId": "d2zy96iaa6jyo3"
+    },
+    "categories": {
+      "auth": {
+        "episteme167d8989": {}
+      }
+    }
+  }
+}
