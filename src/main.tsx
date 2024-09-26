@@ -6,11 +6,7 @@ import { Amplify } from 'aws-amplify';
 import {
     Authenticator,
     useTheme,
-    createTheme,
-    ThemeProvider,
-    Theme,
     View,
-    Heading
 } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import CustomSignOutButton from "./CustomSignOutButton.tsx";
